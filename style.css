@@ -18,6 +18,13 @@ body {
 .movie-container {
     margin: 20px 0px;
 }
+.movie-container button {
+    border-radius: 6px;
+    font-size: 14px;
+    border: transparent;
+    background-color: #fff;
+    cursor: pointer;
+}
 
 .movie-container select {
     background-color: #fff;

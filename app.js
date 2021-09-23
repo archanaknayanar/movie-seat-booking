@@ -3,8 +3,16 @@ const seats = document.querySelectorAll('.row .seat:not(.occupied)');
 const count = document.getElementById('count');
 const total = document.getElementById('total');
 const movieSelect = document.getElementById('movie');
+const clearBtn = document.querySelector('.clear');
 
 let ticketPrice = +movieSelect.value;
+
+//clear local storage
+clearBtn.addEventListener('click', () => {
+    localStorage.clear();
+    location.reload();
+});
+
 populateUI();
 //Save selected movie index and price
 function setMovieData(movieIndex , moviePrice) {
@@ -60,4 +68,5 @@ container.addEventListener('click', e => {
     }
 })
 
+//Initial count and total set
 updateSelectedCount();
